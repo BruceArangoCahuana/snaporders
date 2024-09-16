@@ -13,8 +13,8 @@
 
 - **Frontend:** React, Material-UI
 - **Backend:** Node.js, Express
-- **Base de Datos:** [Nombre de la base de datos]
-- **Otras Tecnologías:** [Cualquier otra tecnología o biblioteca utilizada]
+- **Base de Datos:** Mysql
+
 
 ## 📥 Instalación
 
@@ -22,5 +22,5 @@ Sigue estos pasos para poner en marcha el proyecto:
 
 1. **Clona el repositorio:**
    ```bash
-   git clone https://github.com/tu-usuario/snap-order.git
+   git clone https://github.com/BruceArangoCahuana/snaporders
 
