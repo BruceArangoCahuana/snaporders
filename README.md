@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+Snap Order
+<!-- Puedes reemplazar esto con el enlace a tu logo -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Snap Order es una solución integral para la gestión de ventas en restaurantes. Diseñada para simplificar el manejo de pedidos y la generación de boletas, esta aplicación proporciona una interfaz intuitiva que facilita la operación diaria de los establecimientos gastronómicos.
 
-## Available Scripts
+🚀 Características
+Gestión de Pedidos: Registra y administra los pedidos de los clientes de manera eficiente.
+Generación de Boletas: Emite boletas detalladas con la información de las ventas realizadas.
+Interfaz Amigable: Navega con facilidad gracias a una interfaz diseñada para la comodidad del usuario.
+Historial de Transacciones: Mantén un registro completo de todas las transacciones para análisis y seguimiento.
+🔧 Tecnologías Utilizadas
+Frontend: React, Material-UI
+Backend: Node.js, Express
+Base de Datos: [Nombre de la base de datos]
+Otras Tecnologías: [Cualquier otra tecnología o biblioteca utilizada]
+📥 Instalación
+Sigue estos pasos para poner en marcha el proyecto:
 
-In the project directory, you can run:
+Clona el repositorio:
 
-### `npm start`
+bash
+Copiar código
+git clone https://github.com/tu-usuario/snap-order.git
+Instala las dependencias del frontend:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+bash
+Copiar código
+cd snap-order/frontend
+npm install
+Instala las dependencias del backend:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+bash
+Copiar código
+cd ../backend
+npm install
+Configura el entorno: Crea un archivo .env en el directorio del backend con las variables necesarias, como las credenciales de la base de datos.
 
-### `npm test`
+Inicia el backend:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+bash
+Copiar código
+cd backend
+npm start
+Inicia el frontend:
 
-### `npm run build`
+bash
+Copiar código
+cd ../frontend
+npm start
+🎨 Uso
+Accede a la aplicación: Abre tu navegador y visita http://localhost:3000 para acceder a la interfaz del frontend.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Registra Pedidos: Utiliza el panel de pedidos para ingresar y gestionar los pedidos de tus clientes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Genera Boletas: Al completar un pedido, genera y emite la boleta correspondiente desde el panel de ventas.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Consulta Transacciones: Revisa el historial de todas las transacciones desde la sección de administración.
 
-### `npm run eject`
+🤝 Contribución
+¡Tu ayuda es bienvenida! Si deseas contribuir al proyecto, sigue estos pasos:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Haz un fork del repositorio.
+Crea una rama para tus cambios (git checkout -b feature/nueva-caracteristica).
+Realiza tus modificaciones y haz commit (git commit -am 'Añadir nueva característica').
+Envía un pull request.
+📜 Licencia
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
