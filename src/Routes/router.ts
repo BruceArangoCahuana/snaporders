@@ -1,19 +1,28 @@
-interface RouteConfig {
-    id: number;
-    name: string;
-    path: string;
-    component: string//React.ComponentType<any>; // Replace with the type of your component if needed
-    exact?: boolean;
-}
-const routes : RouteConfig[]= [
+import { IRouteConfig } from "../Interfaces";
+
+const routesConfig : IRouteConfig[]= [
     {
         id: 1,
-        name: "Login",
-        path: "/",
+        name: "Productos",
+        path: "product",
         component: "UU", // Example component
-        exact: true // If this route should be matched exactly
+        exact: true 
+    },
+    {
+        id: 2,
+        name: "Ordenes",
+        path: "orders",
+        component: "UU", // Example component
+        exact: true 
+    },
+    {
+        id: 3,
+        name: "Ventas",
+        path: "sales",
+        component: "UU", 
+        exact: true 
     }
-    // Add more routes here
+    
 ];
 
-export default routes;
+export default routesConfig;

@@ -14,15 +14,21 @@ import React from "react";
 import { useTheme } from "@emotion/react";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
+import StoreIcon from '@mui/icons-material/Store';
+import { IRouteConfig } from "../../../Interfaces";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   toggleDrawer: (newOpen: any) => void;
+  routers:IRouteConfig[]
 }
 
-export default function DrawerList({ toggleDrawer }: Props) {
+export default function DrawerList({ toggleDrawer,routers }: Props) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-
+  const navigate = useNavigate()
  
 
   const handleDrawerClose = () => {
@@ -42,14 +48,16 @@ export default function DrawerList({ toggleDrawer }: Props) {
       </ListItem>
       <Divider />
       <List>
-        {["Productos", "Ordenes", "Ventas"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
+        {routers.map((item:IRouteConfig, index:number) => (
+          <ListItem key={index} disablePadding>
+            <ListItemButton onClick={() => navigate(item.path)}>
               <ListItemIcon sx={{ color: "white" }}>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {item.id === 1 && (<RestaurantIcon />)}
+                  {item.id === 2 && (<ProductionQuantityLimitsIcon />)}
+                  {item.id === 3 && (<StoreIcon />)}
               </ListItemIcon>
               <ListItemText
-                primary={text}
+                primary={item.name}
                 sx={{
                   color: "white",
                   fontWeight: "bold",

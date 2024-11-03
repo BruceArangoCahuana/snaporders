@@ -1,6 +1,6 @@
 import { Grid, Paper, Typography } from "@mui/material";
 
-export default function Welcome() {
+export default function Sales() {
   return (
     <Grid container justifyContent="center" sx={{ mt: 3 }}>
       <Paper
@@ -14,7 +14,7 @@ export default function Welcome() {
           Overview
         </Typography>
         <Typography variant="h4" sx={{ textAlign: "left" }}>
-          Dashboard
+          Sales Product
         </Typography>
       </Paper>
     </Grid>
