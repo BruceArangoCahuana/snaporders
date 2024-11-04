@@ -5,14 +5,14 @@ const routesConfig : IRouteConfig[]= [
         id: 1,
         name: "Productos",
         path: "product",
-        component: "UU", // Example component
+        component: "UU", 
         exact: true 
     },
     {
         id: 2,
         name: "Ordenes",
         path: "orders",
-        component: "UU", // Example component
+        component: "UU", 
         exact: true 
     },
     {

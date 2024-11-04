@@ -58,29 +58,37 @@ export default function ToolbarMenu({
               setValue(newValue);
             }}
           >
-            <IconButton
-              size="small"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              color="default"
-              sx={{ p: 2 }}
-            >
-              <Badge badgeContent={4} color="info">
-                <NotificationsIcon color="action" />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="small"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              color="default"
+            
+            <BottomNavigationAction 
+              icon={
+                <IconButton
+                  size="small"
+                  aria-label="notificaciones"
+                  aria-controls="menu-appbar"
+                  aria-haspopup="true"
+                  color="default"
+                  sx={{ p: 0 }} 
+                >
+                  <Badge badgeContent={4} color="info">
+                    <NotificationsIcon color="action" />
+                  </Badge>
+                </IconButton>
+              } 
+              />
+            <BottomNavigationAction 
               onClick={handleProfile}
-              sx={{ p: 2 }}
-            >
-              <AccountCircle />
-            </IconButton>
+              icon={<IconButton
+                size="small"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                color="default"
+                sx={{ p: 2 }}
+              >
+                <AccountCircle />
+              </IconButton>}
+            />
+            
           </BottomNavigation>
 
           <Menu

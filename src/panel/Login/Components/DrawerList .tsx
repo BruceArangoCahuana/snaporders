@@ -7,29 +7,26 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Typography,
 } from "@mui/material";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import React from "react";
 import { useTheme } from "@emotion/react";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
-import RestaurantIcon from '@mui/icons-material/Restaurant';
-import StoreIcon from '@mui/icons-material/Store';
+import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
+import RestaurantIcon from "@mui/icons-material/Restaurant";
+import StoreIcon from "@mui/icons-material/Store";
 import { IRouteConfig } from "../../../Interfaces";
 import { useNavigate } from "react-router-dom";
 
 interface Props {
   toggleDrawer: (newOpen: any) => void;
-  routers:IRouteConfig[]
+  routers: IRouteConfig[];
 }
 
-export default function DrawerList({ toggleDrawer,routers }: Props) {
+export default function DrawerList({ toggleDrawer, routers }: Props) {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
-  const navigate = useNavigate()
- 
+  const [open, setOpen] = React.useState<boolean>(false);
+  const navigate = useNavigate();
 
   const handleDrawerClose = () => {
     setOpen(false);
@@ -41,20 +38,31 @@ export default function DrawerList({ toggleDrawer,routers }: Props) {
       role="presentation"
       onClick={() => toggleDrawer(false)}
     >
-      <ListItem sx={{display:"flex",justifyContent:"end"}}>
+      <ListItem sx={{ display: "flex", justifyContent: "end" }}>
+        <Typography
+          variant="h5"
+          onClick={() => navigate("/panel")}
+          sx={{ color: "white",
+                 fontWeight: 700,
+                  textAlign: "center",
+                  cursor:'pointer'
+             }}
+        >
+          SnapOrder
+        </Typography>
         <IconButton onClick={handleDrawerClose}>
-          <ChevronLeftIcon sx={{ color: "white" }}  />
+          <ChevronLeftIcon sx={{ color: "white" }} />
         </IconButton>
       </ListItem>
       <Divider />
       <List>
-        {routers.map((item:IRouteConfig, index:number) => (
+        {routers.map((item: IRouteConfig, index: number) => (
           <ListItem key={index} disablePadding>
             <ListItemButton onClick={() => navigate(item.path)}>
               <ListItemIcon sx={{ color: "white" }}>
-                  {item.id === 1 && (<RestaurantIcon />)}
-                  {item.id === 2 && (<ProductionQuantityLimitsIcon />)}
-                  {item.id === 3 && (<StoreIcon />)}
+                {item.id === 1 && <RestaurantIcon />}
+                {item.id === 2 && <ProductionQuantityLimitsIcon />}
+                {item.id === 3 && <StoreIcon />}
               </ListItemIcon>
               <ListItemText
                 primary={item.name}
